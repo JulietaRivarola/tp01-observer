@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Observable<T> {
+public abstract class Observable {
 	
 	List<Observer> observers = new ArrayList<Observer>();
 	
@@ -32,9 +32,5 @@ public abstract class Observable<T> {
 	 */
 	public boolean detach(Observer observer) {
 		return observers.remove(observer);
-	}
-	
-	public T getState() {
-		return null;
 	}
 }
